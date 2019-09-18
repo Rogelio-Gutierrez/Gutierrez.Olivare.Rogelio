@@ -1,0 +1,60 @@
+\documentclass[12pt,a4paper]{report}
+\usepackage[latin1]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\author{Gutierrez Olivares Rogelio}
+\title{Caracteristicas de los convertidores de potencia CA-CD, CD-CA, CA-CA y CD-CD}
+\begin{document}
+\maketitle
+\section{Introduccion}
+En este trabajo se hablara de las principales caractersticas y funciones de los convertidores de potencias como puede ser: de coriente alterna a corriente directa y viceversa.Por lo que a su vez se analisaran la variedad de convertidores sus estrusturas basicas, aplicacion, ventajas y desventajas que estos tienen dentro de algunas situaciones.
+\chapter{Convertidores CC-CA}
+El convertidor de CC/CA tambien conocido como inversor, es un circuito que convierte una fuente de CC en tension de CA sinusoidal para suministrar cargas de CA, controar motores de CA o incluso conectar dispositivos de CC conectados a la red. Al igual que un convertidor CC/CC, la entada de un inversor puede ser una fuente direcra como una bateria, celda solar, o una pila de combustible o puede provenir de un enlace de CC intermedioque puede suministrarse desde una fuente de CA generalmente, los inverores se pueden clasificar segun su salida de CA como monofasicos o trifasicos y tambien como convertidores de puente medio o completo.
+\section{Las Fases}
+Monofasico: 
+Los elementos de este convertidor no permiten la conduccion en el semiciclo negativo, ya que la tension en el catodo es mayor que en el anodo, segun sea el elemento que recorta, estos rectificadores se pueden clasificar en dos tipos:
+1-Si el elemento que recorta la onda es un diodo, se le denominara convertidor ac/dc de media onda no controlado, ya que los diodos no se pueden controlar en si.
+2-Si el compoenente que recorta la onda fuera un elemento controlable, se le denominara convertidor ac/dc de media onda controlado, ya que se podra variar el angulo de disparo a traves de un circuito de control.
+Trifasico:
+Los inversores trifasicos utilizan tres inversores monofasicos independientes, cada uno de ellos produce una tension de salida que tiene una frecuencia fundamental desplazada 120° con respecto a las demas salidas.Este tipo de inversores trifasicos solo son preferibles en aquellas condiciones donde se necesite accseo a las tres fases de las cargas por separado, situacion que no es muy comun. Las desventajas de este tipo de inversores son:
+1. Es necesario la utilizacion de un transformador trifasico a la salida; el secundario del transformador puede encontrarse conectador en estrella o delta.
+2.Esta configuracion de inversores requiere de seis interruptores, cada uno de ellos con su respectivo diodo en anti-paralelo.
+3.Utiliza dos transistores de potencia
+4. Es necesario equilibrar perfectamente las salidas de cada inversor monofasico tanto en magnitud como fase, de lo contrario las tensiones que alimentaran las cargas se encontrar desequilibradas.
+\section{Ondas}
+Cuando el rango de modulacion de la amplitud maxima adquiere valores elevados, el inversor trifasico PWM sobre-modulado se degenera en uno de onda cuadrada. Aqui, cada interruptor se encuentra activo durante 180° de la frecuencia fundamental y nunca estaran cerrados ni abiertos simultaneamente los dos interruptores de uan misma salida. Ademas, existe un desfase de 120° entra la activacion de un interruptor y el del mismo nivel de la salida consecutiva. Por lo tanto, siempre habra tres interructores activados.
+La ondulacion monofasica cuasi-cuadrada para obtener esta ondulacion se desea tension positiva en la carga se mantiene S1y S2 conduccion (S3y S4 abiertos). La tension negativa  se obtine de forma complementaria.
+\section{Convertidores Controlados/No Controlados}
+Los inversores monofasicos con cancelacion de voltaje: se puede variar la magnitud y fracuencia del voltaje de salida, sin tener en cuente que el voltaje de entrada sea constante y que los interruptores no sean controlados en PWM (modulacion de ancho de pulso). Los inversores modulados en PWM: En la entrada de este inversor se encuentra un voltaje CC constante que por lo general proviene de un puente rectificador. La nodulacion de ancho de pulso PWM controla la magnitud y la frecuencua del voltaje de la salida; dicha modulacion controlara los interruptores del inversor. Los inversores de salida cuadrada: Para esta clas de inversores es necesario controlar la magnitud de la entra en CC para de esta manera tener control sobre la magnitud de la salida CA.La principal funcion de esta clase de inversor es la de controlar la frecuencia de la senal de salida. 
+\chapter{Convertidores CD-CD}
+Se llama convertidor DC-DC a un dispositivo que transforma corriente continua de una tension a otra. Suelen ser reguladores de conmutacion, dando a su salida una tenison regulada y, la mayoria de las veces con limitaion de corriente. Se tiende a utilizar frecuencias de conmutacion cada vez mas elevadas porque permite reducir la capacidad de los condensadores, con el consiguiente beneficio de volumen, peso y precio. Simplifica la alimentacion de un sistema, por que permite generas las tensiones donde se necesitan, reduciendo la cantidad de lineas de potencia necesarias. Ademas permiten un mejor manejo de la potencia, control de tensiones de entrada y un aumento en la seguridad.Por otra parte genera ruido y armonicos, no solo en la alimentacion regulada, sino que a traves de su linea de entrada se puede propagar al resto del sistema. Tambien se puede propagar por radiacion. Frecuencias mas altas simplifican el filtrado de este ruido.
+\section{Tipor de convertidores DC-DC}
+SOn varios los tipos de convertidores DC-DC existentes. Normalmente se clasifican en tres grupos: los que disminuyen la tension a su salida (convertidor reductor), los que aumentan la tension a su salida (convertidor elevador) y los que son capaces de realizar ambas funciones.
+\section{Reductor Buck}
+Es un convertidor de potencia, DC/DC sin aislamiento galvanico, que obtine a su salida una tension menor que a su entrada. El diseno es similar a un convertidor elevador o Boost, tambien es una fuente conmutada con dos dispositivos semiconductores, un inductor L y opcionalmente un condensador C a la salida.
+La forma mas simple de reucir una tension continua (DC) es usar un circuito divisor de tension, pero los divisores gastan mucha energia en forma de calor. Por otra parte, un convertidor buck puede tener una alta eficiencia (superior al 95 porciento con circuitos integrados) y autoregulacion.
+\subsection{Estrutura y funcionamiento}
+El funcionamiento del conversor Buck es sencillo, consta de un inductor controlado por dos dispositivos semiconductores los cuales alternan la conexion del inducto bien a la fuente de alimentacion o bien a la carga.
+\section{Convertidores Boost}
+Es un convertidor DC a DC que obtine a su salida una tension continua mayor que a su entrada. es un tipo de fuente de alimentacion conmutada que contiene al menos dos interruptores semiconductores (diodo y transistor), y al menos un elemento para almacenar energia (condnsador, bobina o combinacion de ambos). Frecuente mente se anaden filtros construidos con inductores y condensasores para mejorar el rendimiento.
+La conexion de suministro genera una tension alterna y los dispositivos requieren tension continuas. La conversion de potencia permite que dispositivos de continua utilicen enrgia de fuentes de alterna, este es una proceso llamdo conversion AC a DC y en el usan convertidoes AC a DC como rectificadores.
+\section{Convertidor Buck-Boost}
+Los dos pueden suministrar un voltaje de salida mucho mayor que el voltaje de entrada. Los dos producen un ancho rango de voltajes de salida desde un voltaje maximo hasta casi cero. 1.La forma inversa-El voltaje de salida es de signo inverso a de la entrada. 2. Un buck (step-down) seuido de un boost (step-up)- El voltaje de salida tiene la misma polaridad que la entrada, y puede ser mayor o menor que el de entrada. Un convertidor buck-boost no-inversor puede utilizar un unico inductor que es usado para inductor bucky el inductor boost.
+\section{Convertidor Flyback}
+El convertidor Flyback o convertidor de retroceso es un convertidor DC aDC con aislamiento galvanico entre entrada y salida. Tiene la misma estrutura que un convertidor Buck-Boost con dos bobinas acopladas en lugar de una unica bobina; erroneamente, se suele habalar de un transformador como elemento de ailamiento pero, en realidad no es asi, puesto que un transformador no almacena mas que una minima parte de la energia que maneja mientras que el elemento inductivo flyback almacena toda la energia en el nucleo magnetico.
+\paragraph{Conclusion}
+Los convertidores de potecnias son una implementacion fundamenal en los circuitos armados que facilitan algunas funciones como el el convertir un corriente alterna a corriente directa y viceversa por lo que esto ayuda a que todos los componentes que exiten puedan ser implementados en cualquier proyecto ya que solo basta con aplica un convertidos y adaptaria la corriente al componente coomo sea requerida.
+\\
+Por lo que esta investiacion amplia mis conocimientos con relacion a los convetidores y a su vez la aplicacion de otros implementos en estos mismos como lo son las bobina, diodos, capacitos, tiristores, etc. lo que me permitira a futuro aplicarlos en alguna practica, trabajo y proyecto.
+
+\bibliographystyle{} 
+\bibliography{https://es.wikipedia.org/wiki/Convertidor_DC_a_DC}
+\bibliography{http://www.labc.usb.ve/paginas/EC5136/DriverMotorAC.pdf}
+\bibliography{https://www.arrow.com/es-mx/research-and-events/videos/inverter-vs-converter-vs-rectifier-vs-transformer}
+
+
+\end{document}

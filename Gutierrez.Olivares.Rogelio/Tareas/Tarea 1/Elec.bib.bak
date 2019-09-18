@@ -1,0 +1,21 @@
+% Encoding: UTF-8
+
+@InBook{970-15-0891-2,
+  chapter   = {1},
+  title     = {Electronica de Potencia},
+  publisher = {2004},
+  year      = {2004},
+  author    = {Salvador Segui Chilet},
+  editor    = {Alfa Omega},
+}
+
+@InBook{978-607-707-232-4,
+  chapter   = {2},
+  title     = {Circuitos Electricos},
+  publisher = {2011},
+  year      = {2011},
+  author    = {Richard C. Dork},
+  editor    = {Alfa Omega},
+}
+
+@Comment{jabref-meta: databaseType:bibtex;}
