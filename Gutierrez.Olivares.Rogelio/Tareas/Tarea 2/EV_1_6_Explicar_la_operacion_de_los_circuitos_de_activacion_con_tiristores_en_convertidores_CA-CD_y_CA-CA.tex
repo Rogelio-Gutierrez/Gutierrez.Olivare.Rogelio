@@ -1,0 +1,41 @@
+\documentclass[12pt,a4paper]{report}
+\usepackage[latin1]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\author{Gutierrez Olivares Rogelio}
+\title{Explicacion de la operacion de los circuitos de activacion con tiristores en convertidores}
+\begin{document}
+\maketitle
+\chapter{Tiristores en corriente continua}
+El tiristor es una familia de compoenentes electronicos constituido por elementos semiconductores que utilizan realimentacion interna para producir una conmutacion.Los materiales de los que se compone son de tipo semiconductor, es decir, dependiendo de la temperatura a la que se encuentre puede funcionar como aislantes o como conductores. Son dispositivos unidireccionales o bidirenccionales. SE emplean generalmente para el control de potencia electrica.
+\\
+Para los SCR el dispositivo consta de un anodo y catodo, donde laps uniones son de tipo P-N-P-N entre los mismos. Por lo tanto se puede modelar como 2 transistores tipicos P-N-P y N-P-N, por eso se dice tambien que el tiristor funciona como tension realimentada. Se crean asi 3 uniones(dominadas J1, J2, J3 respectivamente), el terminal de puerta esta a la union J2 (union NP).
+\section{Activacion del tiristor (SCR) en conrriente continua }
+El tiristor se comporta como un circutio abierto hasta que activa su compuerta (GATE) con un pulso de tension que casusa una pequena corriente,( se cierra momentaneamente el interruptor S). El tirisror conduce y se mantiene conduciendo, no necesitando de ninguna senal adicional para mantener la conduccion. No es posible desactivar el tiristor (que deje de conducir) con la compuerta.
+\section{Caracteristicas del pulso de disparo}
+La duracion del pulso aplicado a la compuerta G debe ser lo suficientemente largo para asegurar que la corriente de anodo se eleve hasta el valor de retencion. Otro aspecto importante a tomar en cuenta es la amplitud del pulso, que influye en la duracion de este.
+\section{Desactivacion de un tiristor}
+El tiristor una vez activado, se mantiene conduciendo, mientras la corriente de anodo (IA) se mayor que la corriente de mantenimiento (IH). Normalmente la compuerta (G) no tiene control sobre el tiristor una vez que este esta conduciendo.\\\\
+\subsection{Opciones para desactivar un tiristor:}
+1-Se abre el circuito del anodo (corriente IA = 0)
+\\
+2-Se polariza inversamente el circuto anodo-catodo (el catado tendra un nivel de tension mayor que el del anodo)
+\\
+3-Se deriva la corriente del anodo IA, de manera que esta corriente se reduzca y sea menor a la corriente de mantenimiento IH.
+\section{El tiristor con carga inductiva}
+Cuando la carga del SCR no es resistiva como una carga inductiva, (se comporta como un inductor), es importante tomar en cuenta el tiempo que tarda la corriente en aumentar en una bobina. EL pulso que se aplica a la compuerta debe ser o suficientemente duradero para que la corriente de la carga iguale a la corriente de enganche y asi el tiristor se mantenga en  conduccion.
+\chapter{Tiristor en corriente alterna}
+Se usa principalmente para controlar la potencia que se entrega a una carga.El dispositivo debe ser activado con disparado por compuerta para duconduccion, de lo contrario al alimentarse de una fuente de corriente alterna queda abierto.
+\section{Pulso de disparo}
+El disparo de este dispositivo en corriente alterna es diferente al de corriente directa debido a la variaciones en su forma de onda, el SCR interrumpe su conduccion cuando el coltaje para por el cero voltios, por lo que debe ser disparado. Una caracteristicas especial es que cuando se polariza en inversa no conduce aunque reciba pulsos a la compuerta ya que esta disenado para trabajar en forma unidirrecional.
+\section{Caracteristicas}
+A lo largo en el tiempo de la onda de alterna, existen referencias principales, en donde el voltaje comienza en cero, toma su valor maximo y regresa a cero, luego cambia de polaridad y repite el mismo proceso en valores negativos. Se usan angulos para referir el comportamiento, se toma como cero el inicio, el coltaje maximo y el retorno a cero. En la parte negativa el voltaje maximo es 3Pi/2  y el retorno a cero es 2 Pi. En el SCR puede variarse el angulo para dispararlo, limitando la corriente de compuerta para ser regulada desde una resistencias variables, asi se puede retardar el disparo.
+\paragraph{Conclusion}
+El funcionamiento de los tiristores como activadores cumplen funciones muy especificas dentro de un circuito al ser activados por el mismo siendo una implementacion importante a nuestro conocimiento para obtener una manera de controlar mas efectivamente un circuito ya sea AC y DC.
+
+
+\end{document}
