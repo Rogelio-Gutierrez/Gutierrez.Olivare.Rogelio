@@ -1,0 +1,46 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[latin1]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\author{Gutierrez Olivares Rogelio}
+\title{Arreglos y parametros de los amplificadores clase B}
+\begin{document}
+\maketitle
+\section{Funcionamiento}
+
+Un amplificador de potencia funciona en clase B cuando la polarizacion de DC deja al transistor casi apagado de manera que el transistor se enciende cuando este se le aplica una senal en AC. Es decir que el transistor conducira corriente solamente para una mitad de ciclo de la senal.\\
+Ahora para obtener una senal de ciclo completo sera necesario utilizar dos transistores y lograr que cada uno de ellos conduzca durante medios ciclos opuestos y al tener esta operacion combinada se obtiene un ciclo completo de senal de salida.\\
+Dado que una parte del circuito "empuja" a la senal de arriba durante una mitad del ciclo y la otra parte "jala" la senal hacia abajo durante la otra mitad del ciclo por ende se denomina de contrafase circuito push-pull.
+\section{Arreglos}
+Al iniciar con una senal de entrada obtenida de una etapa amplificadaora de excitacion, es necesario operar el circuito push-pull de dos etapas en medios ciclos alternados para la operacion clase B. Las senales de entrada de polaridad opuesta a 14 dos etapas del circuito push-pull puede obternerce de diversas maneras. La figura se muentra el empleo de un transformador de entrada para brindar la inversion de polaridad entre las dos senales de entrada push-pull. Con un secundario con derivacion central, la polaridad del voltaje en los extremos del transformador con respecto a la derivacion del centro es opuesta.\\
+Los valores de las resistencias y hfe pueden elegirse de manera que la ganancia de coltaje correspondiente a la senal de salida del colector sea igual a 1. La ganancia correspondiente a la senal tomada desde el emisor es 1(operacion de emisor-seguidor). De este modo, el circuito produce senales de polaridad opuesta para accionar la etapa push-pull del amplificador .\\
+La ventaja de esta etapa excitadora es el ahorro en la utilizacion de un transformador con derivada central, que es costoso y voluminoso y que tiene intervalo de operacion de frecuencia limitado. Una desventaka es que las dos senales no provienen de fuentes de impedancias similares. La senal del emisor suministra una adecudada excitacion , puesto que la resistencia de la fuente vista desde el emisor es baja. Sin embargo, la resistencia del circuito colector es relativamente alta y, aunque las senales de salida son iguales sin carga, difieren en condiciones de carga.\\\\
+ \section{Parametros}
+ Potencia de entrada
+ \\
+ Pi(dc)=vccIdc
+ \\
+ Donde:
+ Idc=corriente promedio
+ \\
+ Potencia de Salida
+ \\
+ Po(ac)=VL(rms)/Rl
+ \\
+ Eficiencia
+ \\
+ n=(Po(ac)/Pi(dc))*100
+ \\
+ Potencia disipada
+ \\
+ Pq=Pi(dc)-Po(ac)
+ \\
+ Potencia Maxima
+ \\
+ Po(ac)Maxima = Vcc2/2Rl
+ 
+\end{document}
