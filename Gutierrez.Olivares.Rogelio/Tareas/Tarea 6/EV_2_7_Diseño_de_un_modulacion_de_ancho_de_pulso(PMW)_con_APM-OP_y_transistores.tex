@@ -1,0 +1,31 @@
+\documentclass[12pt,a4paper]{report}
+\usepackage[latin1]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\author{Gutierrez Olivares Rogelio}
+\title{PWM}
+\begin{document}
+\maketitle
+\section{Que es}
+Se usa para controlar el ancho de una senal digital con el proposito de controlar a su vez de  la potencia que se entrea a ciertos dispositivos. Modificando el ancho del pulso activo (que esta en On) se controla la cantidad de corriente que fluye hacia el dispositivo.
+\section{Funcionamiento}
+Un PWM funciona como un interruptor, que constantemente se activa y desactiva, reulando la cantidad de corriente y por ende potencia, que se entrega al dispositivo que se desea controlar. Estos dispositivos pueden ser montores CC o fuentes de luz en CC, entre otros.\\
+Si un motor alimentado con 12 voltios, recibe todo el tiempo la corriente que este pide y entrega la maxima potencia, si es alimentado con 0 voltios, no recibe corriente y no obtiene potencia.\\
+En un sistema PWM el motor recibe corriente por un tiempo y deja de recibir por otro, repitiendose ente proceso continuamente. Si se aumenta el tiempo en que el pulso esta en nivel potencia. 
+\section{Ventajas}
+La principal ventaja es la eficiencia energetica. El circuito que tenga este metodo de control, entrega a la cargga una cantidad de potencia que es proporcional a la potencia que necesita para realizar su trabajo.
+\\
+1-Si se necesita aumentar la velocidad de un motor se incrementa la potencia que se le entrega (ciclo de trabajo mayor)
+\\
+2-Si se necesita disminuir la velocidad de un motor se disminuye la potencia que se entrea. (ciclo de trabajo menor)
+\section{Aplicacion}
+Se utiliza reularmente para:
+\\
+1-Controles de velocidad variables para motores CC
+\\
+2-Dimmers para sistemas de iluminacion con LEDs
+\end{document}
